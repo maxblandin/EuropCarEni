@@ -12,7 +12,7 @@ public class Location {
     private Date dateDebut;
     private Date dateFin;
     private float tarifJournalier;
-    private List<Voiture> voitures;
+    private Voiture voiture;
 
     public String getId() {
         return id;
@@ -42,17 +42,17 @@ public class Location {
         this.tarifJournalier = tarifJournalier;
     }
 
-    public List<Voiture> getVoitures(){ return voitures;}
-    public void setVoitures(List<Voiture> voitures){
-        this.voitures=voitures;
+    public Voiture getVoiture(){ return voiture;}
+    public void setVoiture(Voiture voiture){
+        this.voiture=voiture;
     }
 
     public Location() {}
-    public Location(String id, Date dateDebut, Date dateFin, float tarifJournalier, List<Voiture> voitures) {
+    public Location(String id, Date dateDebut, Date dateFin, float tarifJournalier, Voiture voiture) {
         this.id = id;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.tarifJournalier = tarifJournalier;
-        this.voitures = voitures;
+        this.voiture = voiture;
     }
 }

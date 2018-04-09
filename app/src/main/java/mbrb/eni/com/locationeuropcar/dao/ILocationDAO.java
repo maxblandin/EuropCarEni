@@ -3,6 +3,7 @@ package mbrb.eni.com.locationeuropcar.dao;
 import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.model.Agence;
+import mbrb.eni.com.locationeuropcar.model.Location;
 import mbrb.eni.com.locationeuropcar.model.Utilisateur;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
 import mbrb.eni.com.locationeuropcar.model.Voiture;
@@ -18,4 +19,5 @@ public interface ILocationDAO {
     Agence creerAgence(String raisonSociale, String siret, String voie, String codePostal, String ville) throws Exception;
     Agence recupererAgence(Utilisateur u);
     void modifierAgence(Agence agence);
+    List<Location> getLocations(String id);
 }

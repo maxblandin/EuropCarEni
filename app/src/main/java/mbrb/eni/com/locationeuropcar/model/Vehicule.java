@@ -9,8 +9,8 @@ import java.util.Date;
 public class Vehicule {
     private String id;
     private String libelle;
-    private Date locationMin;
-    private Date locationMax;
+    private int nbJourLocationMin;
+    private int nbJourLocationMax;
     private float tarifMin;
     private float tarifMax;
 
@@ -28,18 +28,18 @@ public class Vehicule {
         this.libelle = libelle;
     }
 
-    public Date getLocationMin() {
-        return locationMin;
+    public int getNbJourLocationMin() {
+        return nbJourLocationMin;
     }
-    public void setLocationMin(Date locationMin) {
-        this.locationMin = locationMin;
+    public void setNbJourLocationMin(int nbJourLocationMin) {
+        this.nbJourLocationMin = nbJourLocationMin;
     }
 
-    public Date getLocationMax() {
-        return locationMax;
+    public int getNbJourLocationMax() {
+        return nbJourLocationMax;
     }
-    public void setLocationMax(Date locationMax) {
-        this.locationMax = locationMax;
+    public void setNbJourLocationMax(int nbJourLocationMax) {
+        this.nbJourLocationMax = nbJourLocationMax;
     }
 
     public float getTarifMin() {
@@ -57,11 +57,11 @@ public class Vehicule {
     }
 
     public Vehicule(){};
-    public Vehicule(String id, String libelle, Date locationMin, Date locationMax, float tarifMin, float tarifMax) {
+    public Vehicule(String id, String libelle, int nbJourLocationMin, int nbJourLocationMax, float tarifMin, float tarifMax) {
         this.id = id;
         this.libelle = libelle;
-        this.locationMin = locationMin;
-        this.locationMax = locationMax;
+        this.nbJourLocationMin = nbJourLocationMin;
+        this.nbJourLocationMax = nbJourLocationMax;
         this.tarifMin = tarifMin;
         this.tarifMax = tarifMax;
     }

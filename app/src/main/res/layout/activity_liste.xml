@@ -9,7 +9,7 @@
         android:id="@+id/ajouter_vehicule_reservation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right||bottom"
+        android:layout_gravity="bottom"
         android:src="@drawable/icon_add"/>
 
 </LinearLayout>

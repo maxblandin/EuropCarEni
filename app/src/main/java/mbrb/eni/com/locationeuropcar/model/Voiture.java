@@ -17,8 +17,8 @@ public class Voiture extends Vehicule {
     }
 
     public Voiture() {}
-    public Voiture(String id, String libelle, Date locationMin, Date locationMax, float tarifMin, float tarifMax, int nbPlace) {
-        super(id, libelle, locationMin, locationMax, tarifMin, tarifMax);
+    public Voiture(String id, String libelle, int nbJourLocationMin, int nbJourLocationMax, float tarifMin, float tarifMax, int nbPlace) {
+        super(id, libelle, nbJourLocationMin, nbJourLocationMax, tarifMin, tarifMax);
         this.nbPlace = nbPlace;
     }
 }
