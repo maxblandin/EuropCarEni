@@ -7,6 +7,7 @@
     tools:context="mbrb.eni.com.locationeuropcar.ecran.ConnexionActivity">
 
    <fragment
+       android:id="@+id/fragment_connexion"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        class="mbrb.eni.com.locationeuropcar.ecran.ConnexionFragment">

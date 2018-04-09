@@ -15,6 +15,7 @@ public class ConnexionActivity extends AppCompatActivity implements ConnexionFra
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
+
     }
 
     @Override
@@ -28,6 +29,6 @@ public class ConnexionActivity extends AppCompatActivity implements ConnexionFra
 
     @Override
     public void inscriptionOK(String identifiant, String mdp) {
-
+        Toast.makeText(this, "Inscription succes ! :)", Toast.LENGTH_SHORT).show();
     }
 }
