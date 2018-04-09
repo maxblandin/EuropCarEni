@@ -14,12 +14,12 @@ public class LocationSvc {
 
     public boolean verifierUtilisateur(String identifiant,String mdp){
 
-        boolean tarace = false;
+        boolean isUtilisateur = false;
         if(dao.seConnecter(identifiant,mdp)){
-            tarace = true;
+            isUtilisateur = true;
         }
 
-        return tarace;
+        return isUtilisateur;
     }
 
     public boolean creerAgence(String raisonSociale, String siret, String voie,

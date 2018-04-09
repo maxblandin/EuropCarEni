@@ -10,4 +10,11 @@
     <string name="code_postal">Code postal</string>
     <string name="ville">Ville</string>
     <string name="modifier">Modifier</string>
+    <string name="title_activity_liste">ListeActivity</string>
+    <string name="lbl_identifiant">identifiant :</string>
+    <string name="lbl_mot_de_passe">Mot de passe :</string>
+    <string name="lbl_confirmer_mot_de_passe">Confirmer mot de passe :</string>
+    <string name="lbl_se_connecter">Se connecter</string>
+    <string name="lbl_sinscrire">S\'inscrire</string>
+    <string name="lbl_inscription">Inscription</string>
 </resources>

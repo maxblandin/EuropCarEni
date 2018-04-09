@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nom d'utilisateur : "/>
+        android:text="@string/lbl_identifiant"/>
 
     <EditText
         android:id="@+id/identifiant"
@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mot de passe : "/>
+        android:text="@string/lbl_mot_de_passe"/>
 
     <EditText
         android:id="@+id/mot_de_passe"
@@ -30,7 +30,7 @@
         android:id="@+id/lbl_confirmer_mdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirmer mot de passe : "
+        android:text="@string/lbl_confirmer_mot_de_passe"
         android:visibility="gone"/>/>
 
     <EditText
@@ -50,19 +50,19 @@
             android:id="@+id/se_connecter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Se connecter"/>
+            android:text="@string/lbl_se_connecter"/>
 
         <Button
             android:id="@+id/inscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="S'inscrire"/>
+            android:text="@string/lbl_sinscrire"/>
 
         <Button
             android:id="@+id/valider_inscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Inscription"
+            android:text="@string/lbl_inscription"
             android:visibility="gone"/>
 
     </LinearLayout>

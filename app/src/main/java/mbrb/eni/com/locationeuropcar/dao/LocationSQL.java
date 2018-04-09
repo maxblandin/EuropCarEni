@@ -2,6 +2,7 @@ package mbrb.eni.com.locationeuropcar.dao;
 
 import mbrb.eni.com.locationeuropcar.model.Agence;
 import mbrb.eni.com.locationeuropcar.model.Utilisateur;
+import mbrb.eni.com.locationeuropcar.model.Vehicule;
 import mbrb.eni.com.locationeuropcar.model.Voiture;
 
 /**
@@ -15,12 +16,12 @@ public class LocationSQL implements ILocationDAO{
     }
 
     @Override
-    public void louerVoiture(Voiture voiture) {
+    public void louerVehicule(Vehicule vehicule) {
 
     }
 
     @Override
-    public void rendreVoiture(Voiture voiture) {
+    public void rendreVehicule(Vehicule vehicule) {
 
     }
 

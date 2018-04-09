@@ -23,12 +23,12 @@ public class LocationBouchon implements ILocationDAO{
     }
 
     @Override
-    public void louerVoiture(Voiture voiture) {
+    public void louerVehicule(Vehicule vehicule) {
 
     }
 
     @Override
-    public void rendreVoiture(Voiture voiture) {
+    public void rendreVehicule(Vehicule vehicule) {
 
     }
 
