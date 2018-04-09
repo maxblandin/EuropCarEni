@@ -50,14 +50,20 @@
             android:id="@+id/se_connecter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Se connecter"
-            android:visibility="visible"/>
+            android:text="Se connecter"/>
 
         <Button
             android:id="@+id/inscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="S'inscrire"/>
+
+        <Button
+            android:id="@+id/valider_inscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inscription"
+            android:visibility="gone"/>
 
     </LinearLayout>
 

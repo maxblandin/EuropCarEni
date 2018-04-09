@@ -1,7 +1,10 @@
 package mbrb.eni.com.locationeuropcar.dao;
 
+import java.util.List;
+
 import mbrb.eni.com.locationeuropcar.model.Agence;
 import mbrb.eni.com.locationeuropcar.model.Utilisateur;
+import mbrb.eni.com.locationeuropcar.model.Vehicule;
 import mbrb.eni.com.locationeuropcar.model.Voiture;
 
 /**

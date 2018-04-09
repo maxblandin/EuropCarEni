@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import mbrb.eni.com.locationeuropcar.model.Agence;
 import mbrb.eni.com.locationeuropcar.model.Utilisateur;
+import mbrb.eni.com.locationeuropcar.model.Vehicule;
 import mbrb.eni.com.locationeuropcar.model.Voiture;
 
 /**

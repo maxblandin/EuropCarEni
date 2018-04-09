@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".ecran.ListeActivity" />
         <activity android:name=".ecran.LouerActivity"></activity>
+        <activity android:name=".ecran.ModifierAgenceActivity"></activity>
     </application>
 
 </manifest>

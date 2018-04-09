@@ -10,11 +10,12 @@ import mbrb.eni.com.locationeuropcar.model.Utilisateur;
  */
 
 public class LocationSvc {
-    private LocationBouchon locaB = new LocationBouchon();
+    ILocationDAO dao = new LocationBouchon();
 
     public boolean verifierUtilisateur(String identifiant,String mdp){
+
         boolean tarace = false;
-        if(locaB.seConnecter(identifiant,mdp)){
+        if(dao.seConnecter(identifiant,mdp)){
             tarace = true;
         }
 
@@ -26,7 +27,7 @@ public class LocationSvc {
         boolean creer = true;
 
         try {
-            locaB.creerAgence(raisonSociale, siret, voie, codePostal, ville);
+            dao.creerAgence(raisonSociale, siret, voie, codePostal, ville);
         } catch (Exception e) {
             creer = false;
         }
@@ -35,10 +36,10 @@ public class LocationSvc {
     }
 
     public Agence recupererAgence(Utilisateur u) {
-        return locaB.recupererAgence(u);
+        return dao.recupererAgence(u);
     }
 
     public void modifierAgence(Agence agence) {
-        locaB.modifierAgence(agence);
+        dao.modifierAgence(agence);
     }
 }

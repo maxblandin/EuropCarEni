@@ -17,7 +17,7 @@ import mbrb.eni.com.locationeuropcar.R;
  * A simple {@link Fragment} subclass.
  */
 public class ConnexionFragment extends Fragment {
-    private  OnConnexionListenner mListener;
+    private OnConnexionListenner mListener;
 
     EditText txtIdentifiant;
     EditText txtMotDePasse;
@@ -25,6 +25,7 @@ public class ConnexionFragment extends Fragment {
     EditText txtConfirmation;
     Button btnConnexion;
     Button btnInscription;
+    Button btnValiderInscription;
 
 
     public ConnexionFragment() {
@@ -42,6 +43,7 @@ public class ConnexionFragment extends Fragment {
 
         btnConnexion = view.findViewById(R.id.se_connecter);
         btnInscription = view.findViewById(R.id.inscription);
+        btnValiderInscription = view.findViewById(R.id.valider_inscription);
 
         if(mListener !=null){
             gestionVueConnexion();
@@ -50,8 +52,11 @@ public class ConnexionFragment extends Fragment {
         this.btnConnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                boolean isError = checkErreur();
                 if(mListener !=null){
-                    mListener.connexionOK(txtIdentifiant.getText().toString(),txtMotDePasse.getText().toString());
+                    if(!isError){
+                        mListener.connexionOK(txtIdentifiant.getText().toString(),txtMotDePasse.getText().toString());
+                    }
                 }
             }
         });
@@ -61,7 +66,16 @@ public class ConnexionFragment extends Fragment {
             public void onClick(View view) {
                 if(mListener != null){
                     gestionVueInscription();
-                    if(txtMotDePasse.getText().toString().equals(txtConfirmation.getText().toString())){
+                }
+            }
+        });
+
+        this.btnValiderInscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean isError = checkErreur();
+                if(mListener !=null){
+                    if(!isError){
                         mListener.inscriptionOK(txtIdentifiant.getText().toString(),txtMotDePasse.getText().toString());
                     }
                 }
@@ -79,24 +93,52 @@ public class ConnexionFragment extends Fragment {
             mListener = (OnConnexionListenner) context;
     } else {
         throw new RuntimeException(context.toString()
-                + " must implement OnFragmentInteractionListener");
-    }
+                + " ERREUR CRITIQUE !");
+        }
     }
 
     public void gestionVueConnexion(){
         this.lblConfirmation.setVisibility(View.GONE);
         this.txtConfirmation.setVisibility(View.GONE);
         this.btnConnexion.setVisibility(View.VISIBLE);
-        this.btnInscription.setText("Inscription");
+        this.btnInscription.setVisibility(View.VISIBLE);
+        this.btnValiderInscription.setVisibility(View.GONE);
     }
 
     private void gestionVueInscription(){
         this.lblConfirmation.setVisibility(View.VISIBLE);
         this.txtConfirmation.setVisibility(View.VISIBLE);
         this.btnConnexion.setVisibility(View.GONE);
-        this.btnInscription.setText("S'inscrire");
-
+        this.btnInscription.setVisibility(View.GONE);
+        this.btnValiderInscription.setVisibility(View.VISIBLE);
     }
+
+    public boolean checkErreur() {
+        boolean erreur = false;
+
+        if (txtIdentifiant.getText().toString().isEmpty()) {
+            txtIdentifiant.setError("Veuillez renseigner votre identifiant !");
+            erreur = true;
+        }
+
+        if (txtMotDePasse.getText().toString().isEmpty()) {
+            txtMotDePasse.setError("Veuillez renseigner votre mot de passe !");
+            erreur = true;
+        }
+
+        if(txtConfirmation.getVisibility() == View.VISIBLE){
+            if(txtConfirmation.getText().toString().isEmpty()){
+                txtConfirmation.setError("Veuillez saisir votre mot de passe une seconde fois !");
+                erreur = true;
+            }else if(!txtConfirmation.getText().toString().equals(txtMotDePasse.getText().toString())){
+                txtConfirmation.setError("Le mot de passe saisie est différent !");
+                erreur = true;
+            }
+        }
+
+        return erreur;
+    }
+
 
     public interface OnConnexionListenner{
         void connexionOK(String identifiant,String mdp);

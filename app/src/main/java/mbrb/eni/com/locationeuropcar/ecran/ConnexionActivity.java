@@ -1,5 +1,6 @@
 package mbrb.eni.com.locationeuropcar.ecran;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ public class ConnexionActivity extends AppCompatActivity implements ConnexionFra
 
     @Override
     public void inscriptionOK(String identifiant, String mdp) {
-        Toast.makeText(this, "Inscription succes ! :)", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(ConnexionActivity.this,ModifierAgenceActivity.class);
+        startActivity(intent);
     }
 }
