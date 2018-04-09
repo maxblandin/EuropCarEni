@@ -27,6 +27,7 @@
         android:inputType="textPassword"/>
 
     <TextView
+        android:id="@+id/lbl_confirmer_mdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirmer mot de passe : "
