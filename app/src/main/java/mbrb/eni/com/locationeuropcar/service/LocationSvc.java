@@ -25,25 +25,20 @@ public class LocationSvc {
                                String codePostal, String ville) {
         boolean creer = true;
 
-        ILocationDAO dao = new LocationBouchon();
-
         try {
-            dao.creerAgence(raisonSociale, siret, voie, codePostal, ville);
+            locaB.creerAgence(raisonSociale, siret, voie, codePostal, ville);
         } catch (Exception e) {
             creer = false;
         }
-
 
         return creer;
     }
 
     public Agence recupererAgence(Utilisateur u) {
-        ILocationDAO dao = new LocationBouchon();
-        return dao.recupererAgence(u);
+        return locaB.recupererAgence(u);
     }
 
     public void modifierAgence(Agence agence) {
-        ILocationDAO dao = new LocationBouchon();
-        dao.modifierAgence(agence);
+        locaB.modifierAgence(agence);
     }
 }
