@@ -3,80 +3,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15dp"
+    android:padding="10dp"
     tools:context="mbrb.eni.com.locationeuropcar.ecran.AgenceFragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         style="@style/TextAppearance.AppCompat.Title"
         android:gravity="center"
         android:text="@string/europcar"
-        android:layout_marginBottom="20dp"/>
+        android:layout_weight="1"/>
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:text="@string/raison_sociale"/>
+        android:layout_height="0dp"
+        android:layout_weight="8">
 
-    <EditText
-        android:id="@+id/agence_raison_sociale"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/raison_sociale"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:text="@string/siret"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/raison_sociale"/>
 
-    <EditText
-        android:id="@+id/agence_siret"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/siret"/>
+            <EditText
+                android:id="@+id/agence_raison_sociale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/raison_sociale"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:text="@string/voie"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/siret"/>
 
-    <EditText
-        android:id="@+id/agence_voie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/voie"/>
+            <EditText
+                android:id="@+id/agence_siret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/siret"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:text="@string/code_postal"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/voie"/>
 
-    <EditText
-        android:id="@+id/agence_code_postal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/code_postal"/>
+            <EditText
+                android:id="@+id/agence_voie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/voie"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:text="@string/ville"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/code_postal"/>
 
-    <EditText
-        android:id="@+id/agence_ville"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/ville"/>
+            <EditText
+                android:id="@+id/agence_code_postal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/code_postal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/ville"/>
+
+            <EditText
+                android:id="@+id/agence_ville"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ville"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/agence_btn_modifier"

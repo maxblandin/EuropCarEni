@@ -26,6 +26,7 @@ public class AgenceFragment extends Fragment {
     EditText txtCodePostal;
     EditText txtVille;
     Button   btnModifier;
+    final String TARACE = "wallah frere fais les liste !";
 
     public AgenceFragment() {
         // Required empty public constructor
