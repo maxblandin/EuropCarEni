@@ -6,7 +6,8 @@ package mbrb.eni.com.locationeuropcar.model;
 
 public class Agence {
 
-    private String id;
+    private String agenceId;
+    private String raisonSociale;
     private String siret;
     private String voie;
     private String codePostal;
@@ -15,20 +16,29 @@ public class Agence {
     public Agence() {
     }
 
-    public Agence(String id, String siret, String voie, String codePostal, String ville) {
-        this.id = id;
+    public Agence(String agenceId, String raisonSociale, String siret, String voie, String codePostal, String ville) {
+        this.agenceId = agenceId;
+        this.raisonSociale = raisonSociale;
         this.siret = siret;
         this.voie = voie;
         this.codePostal = codePostal;
         this.ville = ville;
     }
 
-    public String getId() {
-        return id;
+    public String getAgenceId() {
+        return agenceId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAgenceId(String agenceId) {
+        this.agenceId = agenceId;
+    }
+
+    public String getRaisonSociale() {
+        return raisonSociale;
+    }
+
+    public void setRaisonSociale(String raisonSociale) {
+        this.raisonSociale = raisonSociale;
     }
 
     public String getSiret() {

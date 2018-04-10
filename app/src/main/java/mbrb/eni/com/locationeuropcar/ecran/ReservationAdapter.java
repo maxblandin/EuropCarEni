@@ -12,15 +12,15 @@ import android.widget.TextView;
 import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.R;
-import mbrb.eni.com.locationeuropcar.model.Location;
+import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
 
 /**
  * Created by rbonhomme2016 on 09/04/2018.
  */
 
-public class ReservationAdapter extends ArrayAdapter<Location> {
-    public ReservationAdapter(@NonNull Context context, @NonNull List<Location> objects) {
+public class ReservationAdapter extends ArrayAdapter<Reservation> {
+    public ReservationAdapter(@NonNull Context context, @NonNull List<Reservation> objects) {
         super(context, 0, objects);
     }
 
@@ -41,15 +41,15 @@ public class ReservationAdapter extends ArrayAdapter<Location> {
             convertView.setTag(viewHolder);
         }
 
-        Location location = getItem(position);
-        Vehicule vehicule = location.getVehicule();
+        Reservation reservation = getItem(position);
+        Vehicule vehicule = reservation.getVehicule();
 
         viewHolder.vehiculeId.setText(vehicule.getId());
 
-        String dates = location.getDateDebut() + " - " + location.getDateFin();
+        String dates = reservation.getDateDebut() + " - " + reservation.getDateFin();
         viewHolder.locationDates.setText(dates);
 
-        String tarif = "" + location.getTarifJournalier();
+        String tarif = "" + reservation.getTarifJournalier();
         viewHolder.locationTarif.setText(tarif);
 
         return convertView;

@@ -13,6 +13,8 @@ public class Vehicule {
     private int nbJourLocationMax;
     private float tarifMin;
     private float tarifMax;
+    private boolean isDisponible;
+    private int nbPlaces;
 
     public String getId() {
         return id;
@@ -56,13 +58,29 @@ public class Vehicule {
         this.tarifMax = tarifMax;
     }
 
+    public boolean isDisponible() {
+        return isDisponible;
+    }
+    public void setDisponible(boolean disponible) {
+        isDisponible = disponible;
+    }
+
+    public int getNbPlaces() {
+        return nbPlaces;
+    }
+    public void setNbPlaces(int nbPlaces) {
+        this.nbPlaces = nbPlaces;
+    }
+
     public Vehicule(){};
-    public Vehicule(String id, String libelle, int nbJourLocationMin, int nbJourLocationMax, float tarifMin, float tarifMax) {
+    public Vehicule(String id, String libelle, int nbJourLocationMin, int nbJourLocationMax, float tarifMin, float tarifMax, boolean isDisponible, int nbPlaces) {
         this.id = id;
         this.libelle = libelle;
         this.nbJourLocationMin = nbJourLocationMin;
         this.nbJourLocationMax = nbJourLocationMax;
         this.tarifMin = tarifMin;
         this.tarifMax = tarifMax;
+        this.isDisponible = isDisponible;
+        this.nbPlaces = nbPlaces;
     }
 }

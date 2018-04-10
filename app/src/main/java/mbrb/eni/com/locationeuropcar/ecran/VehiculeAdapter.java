@@ -9,13 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.R;
-import mbrb.eni.com.locationeuropcar.model.Location;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
-import mbrb.eni.com.locationeuropcar.model.Voiture;
 
 /**
  * Created by rbonhomme2016 on 09/04/2018.
@@ -51,9 +48,7 @@ public class VehiculeAdapter extends ArrayAdapter<Vehicule> {
         viewHolder.vehiculeId.setText(vehicule.getId());
         viewHolder.vehiculeLibelle.setText(vehicule.getLibelle());
 
-        if (vehicule instanceof Voiture) {
-            viewHolder.vehiculeNbPlaces.setText(((Voiture) vehicule).getNbPlace());
-        }
+        viewHolder.vehiculeNbPlaces.setText(vehicule.getNbPlaces());
 
         String locMinMax = vehicule.getNbJourLocationMin() + " / " + vehicule.getNbJourLocationMax();
         viewHolder.vehiculeLocMinMax.setText(locMinMax);

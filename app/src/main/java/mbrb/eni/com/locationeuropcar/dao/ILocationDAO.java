@@ -3,10 +3,9 @@ package mbrb.eni.com.locationeuropcar.dao;
 import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.model.Agence;
-import mbrb.eni.com.locationeuropcar.model.Location;
-import mbrb.eni.com.locationeuropcar.model.Utilisateur;
+import mbrb.eni.com.locationeuropcar.model.Reservation;
+import mbrb.eni.com.locationeuropcar.model.User;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
-import mbrb.eni.com.locationeuropcar.model.Voiture;
 
 /**
  * Created by mblandin2016 on 09/04/2018.
@@ -17,7 +16,7 @@ public interface ILocationDAO {
     void louerVehicule(Vehicule vehicule);
     void rendreVehicule(Vehicule vehicule);
     Agence creerAgence(String raisonSociale, String siret, String voie, String codePostal, String ville) throws Exception;
-    Agence recupererAgence(Utilisateur u);
+    Agence recupererAgence(User u);
     void modifierAgence(Agence agence);
-    List<Location> getLocations(String id);
+    List<Reservation> getLocations(String id);
 }

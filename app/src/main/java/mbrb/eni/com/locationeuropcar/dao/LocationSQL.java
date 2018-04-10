@@ -1,9 +1,8 @@
 package mbrb.eni.com.locationeuropcar.dao;
 
 import mbrb.eni.com.locationeuropcar.model.Agence;
-import mbrb.eni.com.locationeuropcar.model.Utilisateur;
+import mbrb.eni.com.locationeuropcar.model.User;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
-import mbrb.eni.com.locationeuropcar.model.Voiture;
 
 /**
  * Created by mblandin2016 on 09/04/2018.
@@ -31,7 +30,7 @@ public class LocationSQL implements ILocationDAO{
     }
 
     @Override
-    public Agence recupererAgence(Utilisateur u) {
+    public Agence recupererAgence(User u) {
         return null;
     }
 

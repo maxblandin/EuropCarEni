@@ -3,7 +3,7 @@ package mbrb.eni.com.locationeuropcar.service;
 import mbrb.eni.com.locationeuropcar.dao.ILocationDAO;
 import mbrb.eni.com.locationeuropcar.dao.LocationBouchon;
 import mbrb.eni.com.locationeuropcar.model.Agence;
-import mbrb.eni.com.locationeuropcar.model.Utilisateur;
+import mbrb.eni.com.locationeuropcar.model.User;
 
 /**
  * Created by mblandin2016 on 09/04/2018.
@@ -35,7 +35,7 @@ public class LocationSvc {
         return creer;
     }
 
-    public Agence recupererAgence(Utilisateur u) {
+    public Agence recupererAgence(User u) {
         return dao.recupererAgence(u);
     }
 

@@ -24,7 +24,7 @@ public class ConnexionActivity extends AppCompatActivity implements ConnexionFra
         if(locaService.verifierUtilisateur(identifiant,mdp)){
             Toast.makeText(this, identifiant + " est connecté ! :)", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "Utilisateur inconnu ! :(", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "User inconnu ! :(", Toast.LENGTH_SHORT).show();
         }
     }
 
