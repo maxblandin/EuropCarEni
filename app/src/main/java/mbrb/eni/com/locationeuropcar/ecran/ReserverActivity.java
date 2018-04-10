@@ -3,6 +3,7 @@ package mbrb.eni.com.locationeuropcar.ecran;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import mbrb.eni.com.locationeuropcar.R;
 import mbrb.eni.com.locationeuropcar.model.Reservation;
@@ -24,5 +25,12 @@ public class ReserverActivity extends AppCompatActivity implements ReserverFragm
         Intent intent = getIntent();
 
         return locationSvc.recupererVehicule(intent.getStringExtra("idVehicule"));
+    }
+
+    @Override
+    public void reservationOk() {
+        Toast.makeText(ReserverActivity.this, getText(R.string.toast_reservation_ok), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(ReserverActivity.this, ListeReservationActivity.class);
+        startActivity(intent);
     }
 }

@@ -33,4 +33,12 @@
     <string name="erreur_agence_voie">Please enter the path (not sure here)</string>
     <string name="erreur_agence_code_postal">Please enter the postal code</string>
     <string name="erreur_agence_ville">Please enter the city</string>
+    <string name="lbl_token">lbl_token</string>
+    <string name="erreur_reserver_date_debut">Please enter a start date.</string>
+    <string name="erreur_reserver_date_fin">Please enter a end date.</string>
+    <string name="erreur_reserver_tarif_journalier">Please enter a price.</string>
+    <string name="toast_reservation_ok">Your book has been registered.</string>
+    <string name="erreur_parse_date">The date is incorrect, the expected format is dd/mm/yyyy.</string>
+    <string name="erreur_montant_tarif">The price should be between the values.</string>
+    <string name="erreur_montant_incorrect">The price is incorrect.</string>
 </resources>
