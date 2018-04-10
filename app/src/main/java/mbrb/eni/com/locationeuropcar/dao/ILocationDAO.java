@@ -3,6 +3,7 @@ package mbrb.eni.com.locationeuropcar.dao;
 import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.model.Agence;
+import mbrb.eni.com.locationeuropcar.dto.LoginDTO;
 import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.User;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
@@ -12,7 +13,7 @@ import mbrb.eni.com.locationeuropcar.model.Vehicule;
  */
 
 public interface ILocationDAO {
-    boolean seConnecter(String identifiant,String motDePasse);
+    boolean seConnecter(LoginDTO loginDTO);
     void louerVehicule(Vehicule vehicule);
     void rendreVehicule(Vehicule vehicule);
     Agence creerAgence(String raisonSociale, String siret, String voie, String codePostal, String ville) throws Exception;

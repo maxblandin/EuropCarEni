@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import mbrb.eni.com.locationeuropcar.R;
+import mbrb.eni.com.locationeuropcar.dto.LoginDTO;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +22,7 @@ public class ConnexionFragment extends Fragment {
 
     EditText txtIdentifiant;
     EditText txtMotDePasse;
+    EditText txtToken;
     TextView lblConfirmation;
     EditText txtConfirmation;
     Button btnConnexion;
@@ -38,6 +40,7 @@ public class ConnexionFragment extends Fragment {
 
         txtIdentifiant = view.findViewById(R.id.identifiant);
         txtMotDePasse = view.findViewById(R.id.mot_de_passe);
+        txtToken = view.findViewById(R.id.token);
         lblConfirmation = view.findViewById(R.id.lbl_confirmer_mdp);
         txtConfirmation = view.findViewById(R.id.confirmer_mot_de_passe);
 
@@ -55,7 +58,8 @@ public class ConnexionFragment extends Fragment {
                 boolean isError = checkErreur();
                 if(mListener !=null){
                     if(!isError){
-                        mListener.connexionOK(txtIdentifiant.getText().toString(),txtMotDePasse.getText().toString());
+                        LoginDTO login = new LoginDTO(txtIdentifiant.getText().toString(),txtMotDePasse.getText().toString(),txtToken.getText().toString());
+                        mListener.connexionOK(login);
                     }
                 }
             }
@@ -76,7 +80,8 @@ public class ConnexionFragment extends Fragment {
                 boolean isError = checkErreur();
                 if(mListener !=null){
                     if(!isError){
-                        mListener.inscriptionOK(txtIdentifiant.getText().toString(),txtMotDePasse.getText().toString());
+                        LoginDTO login = new LoginDTO(txtIdentifiant.getText().toString(),txtMotDePasse.getText().toString(),txtToken.getText().toString());
+                        mListener.inscriptionOK(login);
                     }
                 }
             }
@@ -141,7 +146,7 @@ public class ConnexionFragment extends Fragment {
 
 
     public interface OnConnexionListenner{
-        void connexionOK(String identifiant,String mdp);
-        void inscriptionOK(String identifiant,String mdp);
+        void connexionOK(LoginDTO login);
+        void inscriptionOK(LoginDTO login);
     }
 }

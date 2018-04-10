@@ -19,24 +19,39 @@ import mbrb.eni.com.locationeuropcar.service.LocationSvc;
 
 
 public class ListeReservationFragment extends Fragment {
-
+    private OnListeReservationListener mListener;
     ListView lstReservation;
     LocationSvc locationSvc = new LocationSvc();
 
-    public ListeReservationFragment() {
-
-    }
+    public ListeReservationFragment() {}
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_liste_reservation, container, false);
         lstReservation = v.findViewById(R.id.lst_reservation);
+
+        Context context = getContext();
+        List<Reservation> reservations = mListener.recupererReservations();
+
+        ReservationAdapter reservationAdapter = new ReservationAdapter(context,reservations);
+        lstReservation.setAdapter(reservationAdapter);
+
         return v;
     }
 
-    public void afficherListeReservation(Context context){
-        List<Reservation> reservations = locationSvc.recupererReservations();
-        ReservationAdapter rAdapter = new ReservationAdapter(context,reservations);
-        lstReservation.setAdapter(rAdapter);
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof OnListeReservationListener) {
+            mListener = (OnListeReservationListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " ERREUR CRITIQUE !");
+        }
+    }
+
+    public interface OnListeReservationListener{
+        Context getContext();
+        List<Reservation> recupererReservations();
     }
 }

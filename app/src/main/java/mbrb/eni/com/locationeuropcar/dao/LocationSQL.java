@@ -2,6 +2,7 @@ package mbrb.eni.com.locationeuropcar.dao;
 
 import java.util.List;
 
+import mbrb.eni.com.locationeuropcar.dto.LoginDTO;
 import mbrb.eni.com.locationeuropcar.model.Agence;
 import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.User;
@@ -13,7 +14,7 @@ import mbrb.eni.com.locationeuropcar.model.Vehicule;
 
 public class LocationSQL implements ILocationDAO{
     @Override
-    public boolean seConnecter(String identifiant, String motDePasse) {
+    public boolean seConnecter(LoginDTO loginDTO) {
         return false;
     }
 

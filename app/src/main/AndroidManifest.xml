@@ -22,7 +22,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ecran.LouerActivity" />
         <activity android:name=".ecran.ModifierAgenceActivity" />
-        <activity android:name=".ecran.ListeReservationActivity"></activity>
+        <activity android:name=".ecran.ListeReservationActivity" />
+        <activity android:name=".ecran.ReserverActivity" />
     </application>
 
 </manifest>

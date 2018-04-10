@@ -33,4 +33,5 @@
     <string name="erreur_agence_voie">Veuillez entrer une voie</string>
     <string name="erreur_agence_code_postal">Veuillez entrer un code postal</string>
     <string name="erreur_agence_ville">Veuillez entrer une ville</string>
+    <string name="lbl_token">lbl_token</string>
 </resources>

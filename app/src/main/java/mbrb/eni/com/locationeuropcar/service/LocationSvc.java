@@ -4,6 +4,7 @@ import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.dao.ILocationDAO;
 import mbrb.eni.com.locationeuropcar.dao.LocationBouchon;
+import mbrb.eni.com.locationeuropcar.dto.LoginDTO;
 import mbrb.eni.com.locationeuropcar.model.Agence;
 import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.User;
@@ -16,10 +17,9 @@ import mbrb.eni.com.locationeuropcar.model.Vehicule;
 public class LocationSvc {
     ILocationDAO dao = new LocationBouchon();
 
-    public boolean verifierUtilisateur(String identifiant,String mdp){
-
+    public boolean verifierUtilisateur(LoginDTO login){
         boolean isUtilisateur = false;
-        if(dao.seConnecter(identifiant,mdp)){
+        if(dao.seConnecter(login)){
             isUtilisateur = true;
         }
 

@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <fragment
+        android:id="@+id/fragment_lst_reservation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         class="mbrb.eni.com.locationeuropcar.ecran.ListeReservationFragment">
 
     </fragment>
 
-</LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/ajouter_reservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/icon_add"/>
+
+</FrameLayout>

@@ -9,16 +9,9 @@
     <fragment
         android:id="@+id/lst_fragment_vehicule"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         class="mbrb.eni.com.locationeuropcar.ecran.ListeVehiculeFragment">
 
     </fragment>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/ajouter_vehicule_reservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:src="@drawable/icon_add"/>
 
 </LinearLayout>

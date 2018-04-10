@@ -7,6 +7,7 @@ import java.util.Random;
 import java.util.UUID;
 
 import mbrb.eni.com.locationeuropcar.model.Agence;
+import mbrb.eni.com.locationeuropcar.dto.LoginDTO;
 import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.User;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
@@ -17,9 +18,9 @@ import mbrb.eni.com.locationeuropcar.model.Vehicule;
 
 public class LocationBouchon implements ILocationDAO{
     @Override
-    public boolean seConnecter(String identifiant, String motDePasse) {
+    public boolean seConnecter(LoginDTO loginDTO) {
         boolean isUtilisateur = false;
-        if(identifiant.equals("jeanjean") && motDePasse.equals("1234")){
+        if(loginDTO.getIdentifiant().equals("jeanjean") && loginDTO.getMotDePasse().equals("1234")){
             isUtilisateur = true;
         }
         return isUtilisateur;

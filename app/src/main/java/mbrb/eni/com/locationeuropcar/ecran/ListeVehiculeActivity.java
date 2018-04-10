@@ -8,6 +8,7 @@ import android.os.Bundle;
 import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.R;
+import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
 import mbrb.eni.com.locationeuropcar.service.LocationSvc;
 
