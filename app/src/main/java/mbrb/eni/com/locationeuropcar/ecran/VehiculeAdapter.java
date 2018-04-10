@@ -48,7 +48,9 @@ public class VehiculeAdapter extends ArrayAdapter<Vehicule> {
         viewHolder.vehiculeId.setText(vehicule.getId());
         viewHolder.vehiculeLibelle.setText(vehicule.getLibelle());
 
-        viewHolder.vehiculeNbPlaces.setText(vehicule.getNbPlaces());
+        String nbPlace = "" + vehicule.getNbPlaces();
+
+        viewHolder.vehiculeNbPlaces.setText(nbPlace);
 
         String locMinMax = vehicule.getNbJourLocationMin() + " / " + vehicule.getNbJourLocationMax();
         viewHolder.vehiculeLocMinMax.setText(locMinMax);

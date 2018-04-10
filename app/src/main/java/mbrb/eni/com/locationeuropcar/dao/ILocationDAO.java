@@ -18,5 +18,6 @@ public interface ILocationDAO {
     Agence creerAgence(String raisonSociale, String siret, String voie, String codePostal, String ville) throws Exception;
     Agence recupererAgence(User u);
     void modifierAgence(Agence agence);
-    List<Reservation> getLocations(String id);
+    List<Vehicule> getVehicules();
+    List<Reservation> getReservation();
 }

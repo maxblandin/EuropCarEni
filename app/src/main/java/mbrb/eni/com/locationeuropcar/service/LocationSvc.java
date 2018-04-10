@@ -1,9 +1,13 @@
 package mbrb.eni.com.locationeuropcar.service;
 
+import java.util.List;
+
 import mbrb.eni.com.locationeuropcar.dao.ILocationDAO;
 import mbrb.eni.com.locationeuropcar.dao.LocationBouchon;
 import mbrb.eni.com.locationeuropcar.model.Agence;
+import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.User;
+import mbrb.eni.com.locationeuropcar.model.Vehicule;
 
 /**
  * Created by mblandin2016 on 09/04/2018.
@@ -42,4 +46,7 @@ public class LocationSvc {
     public void modifierAgence(Agence agence) {
         dao.modifierAgence(agence);
     }
+
+    public List<Vehicule> recupererVehicules(){ return dao.getVehicules(); }
+    public List<Reservation> recupererReservations(){ return dao.getReservation(); }
 }

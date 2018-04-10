@@ -22,7 +22,8 @@ public class ConnexionActivity extends AppCompatActivity implements ConnexionFra
     @Override
     public void connexionOK(String identifiant, String mdp) {
         if(locaService.verifierUtilisateur(identifiant,mdp)){
-            Toast.makeText(this, identifiant + " est connecté ! :)", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ConnexionActivity.this,ListeVehiculeActivity.class);
+            startActivity(intent);
         }else{
             Toast.makeText(this, "User inconnu ! :(", Toast.LENGTH_SHORT).show();
         }

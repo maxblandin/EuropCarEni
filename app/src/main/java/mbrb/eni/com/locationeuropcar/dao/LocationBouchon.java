@@ -59,7 +59,26 @@ public class LocationBouchon implements ILocationDAO{
     }
 
     @Override
-    public List<Reservation> getLocations(String id) {
+    public List<Vehicule> getVehicules() {
+        List<Vehicule> voitures = new ArrayList<>();
+
+        Vehicule v1 = new Vehicule("1","C4", 2, 25,35, 95, true, 5);
+        Vehicule v2 = new Vehicule("2","205", 4, 57,28, 34, true, 5);
+        Vehicule v3 = new Vehicule("3","Megan 3", 7, 14,11, 35, true, 5);
+        Vehicule v4 = new Vehicule("4","Ferrari", 1, 3,142, 540, false, 2);
+        Vehicule v5 = new Vehicule("5","Mini", 9, 98,41, 65, false, 4);
+
+        voitures.add(v1);
+        voitures.add(v2);
+        voitures.add(v3);
+        voitures.add(v4);
+        voitures.add(v5);
+
+        return voitures;
+    }
+
+    @Override
+    public List<Reservation> getReservation() {
         List<Reservation> reservations = new ArrayList<>();
 
         Vehicule v1 = new Vehicule("1","C4", 2, 25,35, 95, true, 5);

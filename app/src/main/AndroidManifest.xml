@@ -17,11 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ecran.ListeActivity"
+            android:name=".ecran.ListeVehiculeActivity"
             android:label="@string/title_activity_liste"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ecran.LouerActivity" />
         <activity android:name=".ecran.ModifierAgenceActivity" />
+        <activity android:name=".ecran.ListeReservationActivity"></activity>
     </application>
 
 </manifest>

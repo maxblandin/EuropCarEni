@@ -8,27 +8,32 @@
     <TextView
         android:id="@+id/vehicule_id"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="idVehicule"/>
 
     <TextView
         android:id="@+id/vehicule_libelle"
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="libelleVehicule"/>
 
     <TextView
         android:id="@+id/vehicule_nb_places"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="nbPlace"/>
 
     <TextView
         android:id="@+id/vehicule_loc_min_max"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="vehiculeLocaMinMax"/>
 
     <TextView
         android:id="@+id/vehicule_tarif_min_max"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="vehiculeTarifMinMax"/>
 
 </LinearLayout>

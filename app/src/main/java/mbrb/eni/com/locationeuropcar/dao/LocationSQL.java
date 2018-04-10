@@ -1,6 +1,9 @@
 package mbrb.eni.com.locationeuropcar.dao;
 
+import java.util.List;
+
 import mbrb.eni.com.locationeuropcar.model.Agence;
+import mbrb.eni.com.locationeuropcar.model.Reservation;
 import mbrb.eni.com.locationeuropcar.model.User;
 import mbrb.eni.com.locationeuropcar.model.Vehicule;
 
@@ -37,5 +40,15 @@ public class LocationSQL implements ILocationDAO{
     @Override
     public void modifierAgence(Agence agence) {
 
+    }
+
+    @Override
+    public List<Vehicule> getVehicules() {
+        return null;
+    }
+
+    @Override
+    public List<Reservation> getReservation() {
+        return null;
     }
 }
