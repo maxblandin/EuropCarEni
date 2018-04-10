@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">LocationEuropcar</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Bonjour fragment blanc</string>
     <string name="europcar">EuropCar</string>
     <string name="raison_sociale">Raison sociale</string>
     <string name="siret">SIRET</string>
@@ -17,4 +15,22 @@
     <string name="lbl_se_connecter">Se connecter</string>
     <string name="lbl_sinscrire">S\'inscrire</string>
     <string name="lbl_inscription">Inscription</string>
+    <string name="vehicule_id">VehiculeID</string>
+    <string name="libelle">Libelle</string>
+    <string name="nbplaces">NbPlaces</string>
+    <string name="locminmax">LocMinMax</string>
+    <string name="tarifminmax">TarifMinMax</string>
+    <string name="date_debut">Date début</string>
+    <string name="date_fin">Date fin</string>
+    <string name="tarif_journalier">Tarif journalier</string>
+    <string name="reserver">Réserver</string>
+    <string name="erreur_identifiant">Veuillez renseigner votre identifiant !</string>
+    <string name="erreur_mdp">Veuillez renseigner votre mot de passe !</string>
+    <string name="erreur_confirm_mdp">Veuillez saisir votre mot de passe une seconde fois !</string>
+    <string name="erreur_mdp_different">Le mot de passe saisie est différent !</string>
+    <string name="erreur_agence_raison_sociale">Veuillez entrer une raison sociale</string>
+    <string name="erreur_agence_siret">Veuillez entrer un SIRET</string>
+    <string name="erreur_agence_voie">Veuillez entrer une voie</string>
+    <string name="erreur_agence_code_postal">Veuillez entrer un code postal</string>
+    <string name="erreur_agence_ville">Veuillez entrer une ville</string>
 </resources>

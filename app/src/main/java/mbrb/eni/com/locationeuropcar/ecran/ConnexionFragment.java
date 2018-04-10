@@ -117,21 +117,21 @@ public class ConnexionFragment extends Fragment {
         boolean erreur = false;
 
         if (txtIdentifiant.getText().toString().isEmpty()) {
-            txtIdentifiant.setError("Veuillez renseigner votre identifiant !");
+            txtIdentifiant.setError(getText(R.string.erreur_identifiant));
             erreur = true;
         }
 
         if (txtMotDePasse.getText().toString().isEmpty()) {
-            txtMotDePasse.setError("Veuillez renseigner votre mot de passe !");
+            txtMotDePasse.setError(getText(R.string.erreur_mdp));
             erreur = true;
         }
 
         if(txtConfirmation.getVisibility() == View.VISIBLE){
             if(txtConfirmation.getText().toString().isEmpty()){
-                txtConfirmation.setError("Veuillez saisir votre mot de passe une seconde fois !");
+                txtConfirmation.setError(getText(R.string.erreur_confirm_mdp));
                 erreur = true;
             }else if(!txtConfirmation.getText().toString().equals(txtMotDePasse.getText().toString())){
-                txtConfirmation.setError("Le mot de passe saisie est différent !");
+                txtConfirmation.setError(getText(R.string.erreur_mdp_different));
                 erreur = true;
             }
         }

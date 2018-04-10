@@ -1,0 +1,106 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:gravity="center"
+        android:text="@string/europcar"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/reservation_id"
+            style="@style/texteAppli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/vehicule_id"/>
+
+        <TextView
+            android:id="@+id/reservation_libelle"
+            style="@style/texteAppli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/libelle"/>
+
+        <TextView
+            android:id="@+id/reservation_nb_places"
+            style="@style/texteAppli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nbplaces"/>
+
+        <TextView
+            android:id="@+id/reservation_loc_min_max"
+            style="@style/texteAppli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/locminmax"/>
+
+        <TextView
+            android:id="@+id/reservation_tarif_min_max"
+            style="@style/texteAppli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tarifminmax"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <EditText
+            android:id="@+id/reservation_date_debut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            style="@style/texteAppli"
+            android:hint="@string/date_debut"/>
+
+        <EditText
+            android:id="@+id/reservation_date_fin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            style="@style/texteAppli"
+            android:hint="@string/date_fin"/>
+
+        <EditText
+            android:id="@+id/reservation_tarif_journalier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/texteAppli"
+            android:inputType="numberDecimal"
+            android:hint="@string/tarif_journalier"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_reserver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            style="@style/texteAppli"
+            android:text="@string/reserver"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

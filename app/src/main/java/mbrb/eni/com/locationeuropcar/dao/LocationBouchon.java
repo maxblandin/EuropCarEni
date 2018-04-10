@@ -101,4 +101,15 @@ public class LocationBouchon implements ILocationDAO{
 
         return reservations;
     }
+
+    @Override
+    public Vehicule recupererVehicule(String id) {
+        return new Vehicule("1","C4", 2, 25,35, 95, true, 5);
+    }
+
+    @Override
+    public Reservation recupererReservation(String id) {
+        Vehicule v1 = new Vehicule("1","C4", 2, 25,35, 95, true, 5);
+        return new Reservation("1",new Date() ,new Date(),45,v1);
+    }
 }

@@ -69,27 +69,27 @@ public class AgenceFragment extends Fragment {
         boolean erreur = false;
 
         if (txtRaisonSociale.getText().toString().isEmpty()) {
-            txtRaisonSociale.setError("Veuillez entrer une raison sociale");
+            txtRaisonSociale.setError(getText(R.string.erreur_agence_raison_sociale));
             erreur = true;
         }
 
         if (txtSiret.getText().toString().isEmpty()) {
-            txtSiret.setError("Veuillez entrer un SIRET");
+            txtSiret.setError(getText(R.string.erreur_agence_siret));
             erreur = true;
         }
 
         if (txtVoie.getText().toString().isEmpty()) {
-            txtVoie.setError("Veuillez entrer une voie");
+            txtVoie.setError(getText(R.string.erreur_agence_voie));
             erreur = true;
         }
 
         if (txtCodePostal.getText().toString().isEmpty()) {
-            txtCodePostal.setError("Veuillez entrer un code postal");
+            txtCodePostal.setError(getText(R.string.erreur_agence_code_postal));
             erreur = true;
         }
 
         if (txtVille.getText().toString().isEmpty()) {
-            txtVille.setError("Veuillez entrer une ville");
+            txtVille.setError(getText(R.string.erreur_agence_ville));
             erreur = true;
         }
 

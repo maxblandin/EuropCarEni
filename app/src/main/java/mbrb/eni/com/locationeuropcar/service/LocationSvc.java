@@ -47,6 +47,15 @@ public class LocationSvc {
         dao.modifierAgence(agence);
     }
 
+
     public List<Vehicule> recupererVehicules(){ return dao.getVehicules(); }
     public List<Reservation> recupererReservations(){ return dao.getReservation(); }
+
+    public Vehicule recupererVehicule(String id) {
+        return dao.recupererVehicule(id);
+    }
+
+    public Reservation recupererReservation(String id) {
+        return dao.recupererReservation(id);
+    }
 }

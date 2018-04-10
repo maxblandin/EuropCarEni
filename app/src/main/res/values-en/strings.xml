@@ -15,4 +15,22 @@
     <string name="lbl_se_connecter">Log in</string>
     <string name="lbl_sinscrire">Sign on</string>
     <string name="lbl_inscription">Registration</string>
+    <string name="vehicule_id">VehiculeID</string>
+    <string name="libelle">Libelle</string>
+    <string name="nbplaces">NbPlaces</string>
+    <string name="locminmax">LocMinMax</string>
+    <string name="tarifminmax">TarifMinMax</string>
+    <string name="date_debut">Start date</string>
+    <string name="date_fin">End date</string>
+    <string name="tarif_journalier">Day price</string>
+    <string name="reserver">Book</string>
+    <string name="erreur_identifiant">Please enter your id!</string>
+    <string name="erreur_mdp">Please enter your password!</string>
+    <string name="erreur_confirm_mdp">Please enter your password a second time!</string>
+    <string name="erreur_mdp_different">Paswword missmatch!</string>
+    <string name="erreur_agence_raison_sociale">Please enter the social reason</string>
+    <string name="erreur_agence_siret">Please enther the SIRET</string>
+    <string name="erreur_agence_voie">Please enter the path (not sure here)</string>
+    <string name="erreur_agence_code_postal">Please enter the postal code</string>
+    <string name="erreur_agence_ville">Please enter the city</string>
 </resources>

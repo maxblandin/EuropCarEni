@@ -20,4 +20,6 @@ public interface ILocationDAO {
     void modifierAgence(Agence agence);
     List<Vehicule> getVehicules();
     List<Reservation> getReservation();
+    Vehicule recupererVehicule(String id);
+    Reservation recupererReservation(String id);
 }
