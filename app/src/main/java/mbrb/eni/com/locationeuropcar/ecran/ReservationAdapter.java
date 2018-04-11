@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import mbrb.eni.com.locationeuropcar.R;
@@ -44,9 +45,12 @@ public class ReservationAdapter extends ArrayAdapter<Reservation> {
         Reservation reservation = getItem(position);
         Vehicule vehicule = reservation.getVehicule();
 
-        viewHolder.vehiculeId.setText(vehicule.getId());
+        String vehiculeIdNom = vehicule.getId() + " - " + vehicule.getLibelle();
+        viewHolder.vehiculeId.setText(vehiculeIdNom);
 
-        String dates = reservation.getDateDebut() + " - " + reservation.getDateFin();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY");
+
+        String dates = sdf.format(reservation.getDateDebut()) + " - " + sdf.format(reservation.getDateFin());
         viewHolder.locationDates.setText(dates);
 
         String tarif = "" + reservation.getTarifJournalier();

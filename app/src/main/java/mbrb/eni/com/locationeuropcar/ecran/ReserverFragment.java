@@ -102,7 +102,7 @@ public class ReserverFragment extends Fragment {
         } else {
             try {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/YYYY");
-                Date dateDebut = sdf.parse(edtDateDebut.getText().toString());
+                sdf.parse(edtDateDebut.getText().toString());
             } catch (ParseException e) {
                 edtDateDebut.setError(getText(R.string.erreur_parse_date));
                 erreur = true;
@@ -115,7 +115,7 @@ public class ReserverFragment extends Fragment {
         } else {
             try {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/YYYY");
-                Date dateFin = sdf.parse(edtDateFin.getText().toString());
+                sdf.parse(edtDateFin.getText().toString());
             } catch (ParseException e) {
                 edtDateFin.setError(getText(R.string.erreur_parse_date));
                 erreur = true;
@@ -133,10 +133,12 @@ public class ReserverFragment extends Fragment {
                 tarif = Float.parseFloat(edtTarifJournalier.getText().toString());
             } catch (NumberFormatException e) {
                 edtTarifJournalier.setError(getText(R.string.erreur_montant_incorrect));
+                erreur = true;
             }
 
             if (!(tarif <= vehicule.getTarifMax() && tarif >= vehicule.getTarifMin())) {
                 edtTarifJournalier.setError(getText(R.string.erreur_montant_tarif));
+                erreur = true;
             }
         }
 

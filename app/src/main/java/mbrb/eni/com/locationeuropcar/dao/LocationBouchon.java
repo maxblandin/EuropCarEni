@@ -1,6 +1,8 @@
 package mbrb.eni.com.locationeuropcar.dao;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -88,11 +90,11 @@ public class LocationBouchon implements ILocationDAO{
         Vehicule v4 = new Vehicule("4","Ferrari", 1, 3,142, 540, false, 2);
         Vehicule v5 = new Vehicule("5","Mini", 9, 98,41, 65, false, 4);
 
-        Reservation l1 = new Reservation("1",new Date() ,new Date(),45,v1);
-        Reservation l2 = new Reservation("2",new Date() ,new Date(),29,v2);
-        Reservation l3 = new Reservation("3",new Date() ,new Date(),12,v3);
-        Reservation l4 = new Reservation("4",new Date() ,new Date(),345,v4);
-        Reservation l5 = new Reservation("5",new Date() ,new Date(),57,v5);
+        Reservation l1 = new Reservation("1", getRandomDate(30), getRandomDate(30),45,v1);
+        Reservation l2 = new Reservation("2", getRandomDate(15), getRandomDate(15),29,v2);
+        Reservation l3 = new Reservation("3", getRandomDate(7), getRandomDate(7),12,v3);
+        Reservation l4 = new Reservation("4", getRandomDate(90), getRandomDate(90),345,v4);
+        Reservation l5 = new Reservation("5", getRandomDate(180), getRandomDate(180),57,v5);
 
         reservations.add(l1);
         reservations.add(l2);
@@ -105,12 +107,45 @@ public class LocationBouchon implements ILocationDAO{
 
     @Override
     public Vehicule recupererVehicule(String id) {
-        return new Vehicule("1","C4", 2, 25,35, 95, true, 5);
+
+        List<Vehicule> vehicules = getVehicules();
+
+        Vehicule retour = null;
+
+        for (Vehicule v : vehicules) {
+            if (v.getId().equals(id)) {
+                retour = v;
+                break;
+            }
+        }
+
+        return retour;
     }
 
     @Override
     public Reservation recupererReservation(String id) {
-        Vehicule v1 = new Vehicule("1","C4", 2, 25,35, 95, true, 5);
-        return new Reservation("1",new Date() ,new Date(),45,v1);
+        List<Reservation> reservations = getReservation();
+
+        Reservation retour = null;
+
+        for (Reservation r : reservations) {
+            if (r.getReservationId().equals(id)) {
+                retour = r;
+                break;
+            }
+        }
+
+        return retour;
+    }
+
+    public Date getRandomDate(int intervalJours) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        Random rand = new Random();
+
+        cal.add(Calendar.DATE, rand.nextInt(intervalJours));
+        Date date = cal.getTime();
+
+        return date;
     }
 }

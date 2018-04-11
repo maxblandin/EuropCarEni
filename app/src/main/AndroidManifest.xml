@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mbrb.eni.com.locationeuropcar">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,10 +24,10 @@
             android:name=".ecran.ListeVehiculeActivity"
             android:label="@string/title_activity_liste"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ecran.LouerActivity" />
         <activity android:name=".ecran.ModifierAgenceActivity" />
         <activity android:name=".ecran.ListeReservationActivity" />
         <activity android:name=".ecran.ReserverActivity" />
+        <activity android:name=".ecran.RendreActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,87 @@
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:gravity="center"
+        android:text="@string/europcar"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/rendre_vehicule_id"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/rendre_vehicule_dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/rendre_vehicule_tarif_journalier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/rendre_vehicule_endommage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/est_endommage"/>
+
+        <CheckBox
+            android:id="@+id/rendre_vehicule_plein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rendre_plein"/>
+
+        <EditText
+            android:id="@+id/rendre_vehicule_km"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/rendre_nb_km"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_ajouter_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rendre_ajout_photo"/>
+        
+        <Button
+            android:id="@+id/btn_rendre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_rendre"/>
+
+    </LinearLayout>
+
+</LinearLayout>

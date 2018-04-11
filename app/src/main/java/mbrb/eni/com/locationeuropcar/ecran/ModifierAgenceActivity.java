@@ -23,7 +23,7 @@ public class ModifierAgenceActivity extends AppCompatActivity implements AgenceF
 
         service.creerAgence(raisonSociale, siret, voie, codePostal, ville);
 
-        Intent intent = new Intent(ModifierAgenceActivity.this, LouerActivity.class);
+        Intent intent = new Intent(ModifierAgenceActivity.this, ListeReservationActivity.class);
         startActivity(intent);
     }
 }

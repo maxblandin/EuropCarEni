@@ -41,4 +41,9 @@
     <string name="erreur_parse_date">Date incorrect, le format attendue est : jj/mm/aaaa.</string>
     <string name="erreur_montant_tarif">Le tarif journalier doit être compris entre les valeurs données.</string>
     <string name="erreur_montant_incorrect">Le montant saisie est incorrect.</string>
+    <string name="est_endommage">Est endommagé</string>
+    <string name="rendre_plein">Le plein est fait</string>
+    <string name="rendre_nb_km">Nombre de kilomètres</string>
+    <string name="rendre_ajout_photo">Ajouter une photo</string>
+    <string name="btn_rendre">Rendre</string>
 </resources>

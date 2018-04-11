@@ -43,4 +43,11 @@ public class ListeReservationActivity extends AppCompatActivity implements Liste
     public List<Reservation> recupererReservations() {
         return locationSvc.recupererReservations();
     }
+
+    @Override
+    public void appuieListe(Reservation reservation) {
+        Intent intent = new Intent(ListeReservationActivity.this, RendreActivity.class);
+        intent.putExtra("idReservation", reservation.getReservationId());
+        startActivity(intent);
+    }
 }
