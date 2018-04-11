@@ -14,6 +14,8 @@ import mbrb.eni.com.locationeuropcar.model.Vehicule;
  * Created by mblandin2016 on 09/04/2018.
  */
 
+
+
 public class LocationSvc {
     ILocationDAO dao = new LocationBouchon();
 
